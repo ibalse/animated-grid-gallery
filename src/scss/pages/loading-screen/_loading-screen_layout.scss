@@ -1,0 +1,29 @@
+.loading-screen {
+    @include l-flexbox-column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zIndexLoadingScreen;
+    background-color: $secondaryColor;
+    height: 100%;
+    width: 100%;
+    &__title {
+        @include t-subtitle($onSecondary);
+        display: inline;
+        padding-bottom: 30px;
+    }
+    &__loader {
+        @include o-loader($primaryColor);
+    }
+}
+
+.loading-screen--fade {
+    opacity: 0%;
+    transition: opacity 1s linear;
+    .loading-screen__title {
+        display: none;
+    }
+    .loading-screen__loader {
+        display: none;
+    }
+}

@@ -1,0 +1,5 @@
+@include breakpoint-from($bpCollumns-2) {
+  .card--mod--inactive {
+    background-color: $surfaceColorVariant;
+  }
+}

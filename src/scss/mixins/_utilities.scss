@@ -1,0 +1,28 @@
+@mixin u-text-scroll($lineCount, $lineHeight) {
+
+  display: flex;
+
+  &>p {
+    margin: 0px;
+    align-self: flex-end;
+    display: -webkit-box;
+    line-height: $lineHeight;
+    max-height: $lineCount * $lineHeight;
+    overflow: hidden;
+    // overflow: auto;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineCount;
+
+    &:active {
+      max-height: $lineHeight * 10;
+      transition: max-height 10s;
+      -webkit-line-clamp: 10;
+    }
+
+    &:hover {
+      max-height: $lineHeight * 10;
+      transition: max-height 10s;
+      -webkit-line-clamp: 10;
+    }
+  }
+}

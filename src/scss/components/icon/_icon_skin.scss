@@ -1,0 +1,14 @@
+
+.icon,
+.icon * {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.icon {
+  cursor: pointer;
+  svg {
+    fill: $primaryColor;
+  }
+}
+
+

@@ -1,0 +1,35 @@
+// units in px
+$iconSize: 24px;
+$iconPadding: $iconSize/2;
+
+$cMenuPadding: 5px;
+$cMenuHeight: $iconSize + 2*$iconPadding + $cMenuPadding;
+
+$cCardWidth: 225px; 
+$cCardHeight: 300px;
+$cCardMargin: 12px;
+
+$cCardTextWidth: $cCardWidth*0.8;
+$cCardTextHeight: 150px;
+
+$cGalleryMargin: $cCardMargin; 
+
+$cCardWidth-max: $cCardWidth*1.2;
+$cCardHeight-max: $cCardHeight*1.2;
+
+// $cGalleryMargin-mini: $cCardMargin;
+// $cGalleryMargin-midi: floor($cCardWidth/4);
+// $cGalleryMargin-maxi: floor($cCardWidth/2);
+$cGalleryMargin-mini: 0px;
+$cGalleryMargin-midi: $cCardMargin;
+$cGalleryMargin-maxi: $cCardMargin;
+
+
+$scrollbar: 20px; // for counting breakpoints
+
+// card height, margin ratio to width ( in [0-1])
+$cCardWidth-ratio: 1;
+$cCardHeight-ratio: $cCardHeight/$cCardWidth;
+$cCardMargin-ratio: $cCardMargin/$cCardWidth;
+
+

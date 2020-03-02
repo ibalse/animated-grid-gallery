@@ -1,0 +1,17 @@
+@include breakpoint-from($bpCollumns-2) {
+  .card--mod--inactive {
+
+    .image {
+      opacity: 0;
+    }
+
+    .card__subtitle {
+      opacity: 1;
+    }
+
+    .card__title {
+      opacity: 1;
+    }
+
+  }
+}

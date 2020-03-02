@@ -1,0 +1,39 @@
+.image {
+    overflow: hidden;
+    position: relative;
+
+    &__image {
+        min-height: inherit;
+        min-width: inherit;
+        width: inherit;
+        height: inherit;
+        max-width: inherit;
+        max-height: inherit;
+        object-fit: cover;
+        overflow: hidden;
+        object-position: 50% 50%;
+    }
+
+    &__loader {    
+        @include o-loader($primaryColor);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        margin-left: -10px - 2px;
+        top: 50%;
+        z-index: $zIndexImage; 
+        display: none;
+    }
+}
+
+.image--mod--loading {
+    
+    .image__image {
+        filter: brightness(0.3);
+    }
+
+    .image__loader {
+        display: inline-block;
+    }
+}

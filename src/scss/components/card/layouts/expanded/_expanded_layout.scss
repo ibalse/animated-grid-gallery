@@ -1,0 +1,93 @@
+@mixin c-card-vertical($spanSize) {
+  grid-column-start: auto;
+  grid-row-end: span $spanSize;
+}
+
+@mixin c-card-horizontal($spanSize) {
+  display: grid;
+  grid-template-areas:
+    "A1 B1"
+    "A2 B2"
+    "A3 B3"
+    "A4 B4"
+    "A5 B5";
+  grid-template-columns: auto 1fr;
+
+  grid-column-start: auto;
+  grid-column-end: span $spanSize;
+
+  height: var(--c-card-height);
+  max-height: var(--c-card-height);
+
+
+  .image {
+    min-width: 100%;
+    width: auto;
+    max-width: 100%;
+
+    min-height: var(--c-card-height);
+    height: var(--c-card-height);
+    max-height: var(--c-card-height);
+
+    grid-row: A1/-1;
+    grid-column: A1;
+  }
+
+  .image  .image__image {
+    object-fit: contain;
+  }
+
+  .card__subtitle {
+    grid-row: B1;
+    grid-column: B1;
+    width: auto;
+    max-width: 80%;
+  }
+
+  .card__title {
+    grid-row: B2;
+    grid-column: B2;
+    width: auto;
+    max-width: 80%;
+  }
+
+  .card__actions {
+    grid-row: B5;
+    grid-column: B5;
+    justify-self: start;
+  }
+
+  .card__divider {
+    display: none;
+  }
+}
+
+// default horizontal span 
+.card--layout--expanded.card--mod--horizontal {
+  grid-column: 1 / -1;
+}
+
+@include breakpoint-from($bpCollumns-2) {
+  .card--layout--expanded.span-2H {
+    @include c-card-horizontal(2);
+  }
+  .card--layout--expanded.span-2V {
+    @include c-card-vertical(2);
+  }
+  .card--layout--expanded.span-3V {
+    @include c-card-vertical(3);
+  }
+
+}
+
+@include breakpoint-from($bpCollumns-3) {
+  .card--layout--expanded.span-3H {
+    @include c-card-horizontal(3);
+  }
+}
+
+@include breakpoint-from($bpCollumns-4) {
+  .card--layout--expanded.span-4H {
+    @include c-card-horizontal(4);
+  }
+}

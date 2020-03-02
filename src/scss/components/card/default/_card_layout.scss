@@ -1,0 +1,46 @@
+.card {
+  overflow: hidden;
+  display: grid;
+  grid-template-areas:
+    "A1 B1"  // image
+    "A2 B2"  // action block
+    "A3 B3"  // divider
+    "A4 B4"  // title
+    "A5 B5"; // subtitle
+
+  grid-row: auto;
+
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  align-content: start;
+
+  .image {
+    grid-row: A1;
+    grid-column: A1/-1;
+  }
+
+  .card__actions {
+    grid-row: A2;
+    grid-column: A2/-1;
+    justify-self: end;
+  }
+
+  .card__divider {
+    grid-row: A3;
+    grid-column: A3/-1;
+  }
+
+  .card__subtitle {
+    grid-row: A4;
+    grid-column: A4/-1;
+    align-self: start;
+  }
+
+  .card__title {
+    grid-row: A5;
+    grid-column: A5/-1;
+    align-self: start;
+  }
+}

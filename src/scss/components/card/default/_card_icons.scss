@@ -1,0 +1,22 @@
+.card__actions__expand .icon__call,
+.card__actions__expand .icon__active {
+  svg {
+    height: $iconSize + 2*3px;
+    padding: $iconPadding - 3px;
+    transform: rotate(-45deg);
+    transition: transform 200ms;
+
+    @media (pointer: fine) {
+      &:hover {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.card__actions .icon__cancel {
+  svg {
+    height: $iconSize - 2*3px;
+    padding: $iconPadding + 3px;
+  }
+}

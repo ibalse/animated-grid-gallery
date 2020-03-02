@@ -1,0 +1,51 @@
+
+@mixin c-menu-border {
+  border-bottom: 1px solid $surfaceColor;
+}
+
+.menu {
+  @include c-menu-border;
+  background-color: $secondaryColor;
+
+  &__item {
+    @include o-icon;
+    @include s-icon-active(transparent, $primaryColor);
+    .icon[data-id="close"] {
+      display: none;
+    }
+  }
+
+  &__item--active {
+    @include o-icon;
+    @include s-icon-active(#393939, $primaryColor);
+
+    svg {
+      box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    &:active .icon>svg {
+      transform: scale(1);
+      filter: brightness(0.7);
+    }
+
+    @media (pointer: fine) {
+      &:hover .icon>svg {
+        transform: scale(1);
+        filter: brightness(0.7);
+      }
+    }
+  }
+
+}
+
+.menu--mini {
+  filter: opacity(20%);
+  box-shadow: none;
+  border-color: transparent;
+
+  &:hover {
+    filter: opacity(100%);
+    @include c-menu-border;
+  }
+
+}

@@ -1,0 +1,72 @@
+@mixin o-button {
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 15px;
+}
+
+@mixin o-tag {
+  border-radius: 20px;
+  cursor: default;
+  padding: 8px 15px;
+}
+
+@mixin o-divider($color, $length) {
+  align-self: center;
+  border: 0;
+  background-color: $color;
+  height: 1px;
+  width: $length;
+}
+
+@mixin o-chip-active($background, $color) {
+  @include o-tag;
+  @include s-full-active($background, $color);
+  @include l-flexbox-centered;
+  // pointer-events: none;
+
+  &>.icon {
+    margin: -10px;
+    margin-left: 2px;
+    pointer-events: auto;
+  }
+
+  &>.icon>svg {
+    fill: $background;
+    filter: brightness(75%);
+    height: 24px;
+    width: 24px;
+  }
+
+  &:active &>.icon>svg {
+    filter: brightness(55%);
+    cursor: pointer;
+  }
+
+  @media (pointer: fine) {
+  &:hover &>.icon>svg {
+    filter: brightness(55%);
+    cursor: pointer;
+  }
+}
+}
+
+@mixin o-icon() {
+  cursor: pointer;
+  
+  & svg {
+    height: $iconSize;
+    padding: $iconPadding;
+    border-radius: 50px;  
+  }
+}
+
+
+@mixin o-loader($color) {
+  border: 2px solid $color;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: a-spin 2s linear infinite;
+}

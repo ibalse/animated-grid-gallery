@@ -1,0 +1,37 @@
+.gallery {
+  width: 100%;
+
+  &__content {
+    display: grid;
+    gap: calc(2*var(--c-card-margin));
+    grid-template-columns: repeat(auto-fill,  var(--c-card-width));
+    grid-auto-rows:  fit-content;
+    grid-auto-flow: dense;
+    justify-content: center;
+
+    padding-top: var(--c-card-margin);
+    padding-bottom: var(--c-card-margin);
+  }
+
+  &__loader,
+  &__empty-state {
+    display: none;
+  }
+}
+
+.gallery--loading {
+  .gallery__loader {
+    display: block;
+    text-align: center;
+    margin: var(--c-card-margin);
+    padding: var(--c-card-margin);
+  }
+}
+
+.gallery--empty {
+  .gallery__empty-state {
+    display: block;
+    text-align: center;
+    margin: 5vw;
+  }
+}

@@ -1,0 +1,47 @@
+@import 'layout';
+
+// counted breakpoints: 1, 2, 3, 4 collumns in px
+$bpCollumn-1: 2*$cGalleryMargin-mini + 2*$cCardMargin + $cCardWidth; // with margins
+// $bpCollumn-1: $cCardWidth; // without margins
+$bpCollumns-2: 2*$cGalleryMargin-mini + 2*(2*$cCardMargin + $cCardWidth) + $scrollbar;
+$bpCollumns-3: 2*$cGalleryMargin-midi + 3*(2*$cCardMargin + $cCardWidth) + $scrollbar;
+$bpCollumns-4: 2*$cGalleryMargin-maxi + 4*(2*$cCardMargin + $cCardWidth) + $scrollbar;
+
+// width in vw for breakpoints for CSS variables
+// needed, because css variables do not accept calc()
+$cCardWidthVw-col1: 100*$cCardWidth/$bpCollumn-1;
+$cCardWidthVw-col2: 100*$cCardWidth/$bpCollumns-2;
+$cCardWidthVw-col3: 100*$cCardWidth/$bpCollumns-3;
+$cCardWidthVw-col4: 100*$cCardWidth/$bpCollumns-4;
+
+$cCardHeightVw-col1: $cCardWidthVw-col1*$cCardHeight-ratio;
+$cCardHeightVw-col2: $cCardWidthVw-col2*$cCardHeight-ratio;
+$cCardHeightVw-col3: $cCardWidthVw-col3*$cCardHeight-ratio;
+$cCardHeightVw-col4: $cCardWidthVw-col4*$cCardHeight-ratio;
+
+$cCardMarginVw-col1: $cCardWidthVw-col1*$cCardMargin-ratio;
+$cCardMarginVw-col2: $cCardWidthVw-col2*$cCardMargin-ratio;
+$cCardMarginVw-col3: $cCardWidthVw-col3*$cCardMargin-ratio;
+$cCardMarginVw-col4: $cCardWidthVw-col4*$cCardMargin-ratio;
+
+/*
+@debug "$cCardHeightVw-col1 #{$cCardHeightVw-col1}";
+@debug "$cCardHeightVw-col2 #{$cCardHeightVw-col2}";
+@debug "$cCardHeightVw-col3 #{$cCardHeightVw-col3}";
+@debug "$cCardHeightVw-col4 #{$cCardHeightVw-col4}";
+
+@debug "$bpCollumn-1 #{$bpCollumn-1}";
+@debug "$bpCollumns-2 #{$bpCollumns-2}";
+@debug "$bpCollumns-3 #{$bpCollumns-3}";
+@debug "$bpCollumns-4 #{$bpCollumns-4}";
+
+@debug "$cCardWidthVw-col1 #{$cCardWidthVw-col1}";
+@debug "$cCardWidthVw-col2 #{$cCardWidthVw-col2}";
+@debug "$cCardWidthVw-col3 #{$cCardWidthVw-col3}";
+@debug "$cCardWidthVw-col4 #{$cCardWidthVw-col4}";
+
+@debug "$cCardMarginVw-col1 #{$cCardMarginVw-col1}";
+@debug "$cCardMarginVw-col2 #{$cCardMarginVw-col2}";
+@debug "$cCardMarginVw-col3 #{$cCardMarginVw-col3}";
+@debug "$cCardMarginVw-col4 #{$cCardMarginVw-col4}";
+*/

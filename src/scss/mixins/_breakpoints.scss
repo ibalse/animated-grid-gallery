@@ -1,0 +1,23 @@
+// $from, $to: column count values in config/_breakpoints.scss
+// $bpCollumn-1
+// $bpCollumn-2
+// $bpCollumn-3
+// $bpCollumn-4
+
+@mixin breakpoint-to($to) {
+  @media (max-width: $to - 1) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($from, $to) {
+  @media (min-width: $from) and (max-width: $to - 1) {
+    @content;
+  }
+}
+
+@mixin breakpoint-from($from) {
+  @media (min-width: $from) {
+    @content;
+  }
+}

@@ -1,0 +1,37 @@
+@include breakpoint-from($bpCollumns-2) {
+
+  .card--layout--compact {
+    height: var(--c-card-height);
+    width: var(--c-card-width);
+    max-height: var(--c-card-height);  // for transition
+    max-width: var(--c-card-width); // for transition
+
+    display: grid;
+    grid-template:
+      "A1 B1 C1" min-content
+      "A2 B2 C2" min-content
+      "A3 B3 C3" auto
+      "A4 B4 C4" min-content;
+
+    .image {
+      grid-row: A1/-1;
+      grid-column: A1/-1;
+    }
+
+    .card__subtitle {
+      grid-row: A1;
+      grid-column: A1/-1;
+    }
+
+    .card__title {
+      grid-row: A2;
+      grid-column: A2/-1;
+    }
+
+    .card__actions {
+      grid-row: A4;
+      grid-column: A4/-1;
+      justify-self:end;
+    }
+  }
+}

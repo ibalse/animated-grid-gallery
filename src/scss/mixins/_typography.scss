@@ -1,0 +1,19 @@
+  
+  @mixin t-regular($color) {
+    color: $color;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  @mixin t-title($color) {
+    color: $color;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  @mixin t-subtitle($color) {
+    font-family: 'Tenor Sans', sans-serif;
+    color: $color;
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,10 @@
+.card--mod--horizontal {
+
+  @media (pointer: fine) {
+    .card__actions__expand:hover .icon__call {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

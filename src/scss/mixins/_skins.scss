@@ -1,0 +1,84 @@
+@mixin s-full($background, $color) {
+  color: $color;
+  background-color: $background;
+  border: 1px solid $background;
+  filter: opacity(100%);
+
+  &:active {
+    filter: opacity(100%);
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      filter: opacity(100%);
+    }
+  }
+}
+
+@mixin s-full-active($background, $color) {
+  @include s-full($background, $color);
+  filter: opacity(80%);
+
+  &:active {
+    filter: opacity(100%);
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      filter: opacity(100%);
+    }
+  }
+}
+
+@mixin s-ghost($color) {
+  color: $color;
+  background-color: transparent;
+  border: 1px solid $color;
+}
+
+@mixin s-ghost-active($color) {
+  @include s-ghost($color);
+  filter: opacity(70%);
+
+  &:hover,
+  &:active {
+    color: $color;
+    border-color: $color;
+    filter: opacity(100%);
+  }
+}
+
+@mixin s-noborder($color) {
+  color: $color;
+  background-color: transparent;
+  border: 1px solid $color;
+  border-color: transparent;
+}
+
+@mixin s-noborder-active($color) {
+  @include s-noborder ($color);
+  filter: opacity(70%);
+
+  &:hover,
+  &:active {
+    filter: opacity(100%);
+    // border-color: $color;
+  }
+}
+
+@mixin s-icon($background, $color) {
+  & svg {
+    fill: $color;
+    background-color: $background;
+    filter: opacity(100%);
+  }
+}
+
+@mixin s-icon-active($background, $color) {
+  @include s-icon($background, $color);
+
+  &:hover svg,
+  &:active svg {
+    transform: scale(1.2);
+  }
+}

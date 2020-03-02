@@ -1,0 +1,40 @@
+:root {
+    font-family: 'Open Sans', sans-serif;
+    --c-card-width: #{$cCardWidthVw-col1}vw;
+    --c-card-height: #{$cCardHeightVw-col1}vw;
+    --c-card-margin: #{$cCardMarginVw-col1}vw; 
+    --c-card-text-width: #{$cCardTextWidth}; //px
+    --c-card-text-height: #{$cCardTextHeight}; //px
+    --c-gallery-margin: #{$cGalleryMargin-mini}; // px
+    --c-menu-height: #{$cMenuHeight}; // px
+}
+
+
+@include breakpoint-between($bpCollumns-2, $bpCollumns-3) {
+    :root {
+        --c-card-width: #{$cCardWidthVw-col2}vw;
+        --c-card-height: #{$cCardHeightVw-col2}vw;
+        --c-card-margin: #{$cCardMarginVw-col2}vw;
+        --c-gallery-margin: #{$cGalleryMargin-mini}; // px
+    }
+  }
+
+
+
+  @include breakpoint-between($bpCollumns-3, $bpCollumns-4) {
+    :root {
+        --c-card-width: #{$cCardWidthVw-col3}vw;
+        --c-card-height: #{$cCardHeightVw-col3}vw;
+        --c-card-margin: #{$cCardMarginVw-col3}vw;
+        --c-gallery-margin: #{$cGalleryMargin-midi};
+    }
+  }
+  
+  @include breakpoint-from($bpCollumns-4) {
+    :root {
+        --c-card-width: #{$cCardWidthVw-col4}vw;
+        --c-card-height: #{$cCardHeightVw-col4}vw;
+        --c-card-margin: #{$cCardMarginVw-col4}vw;
+        --c-gallery-margin: #{$cGalleryMargin-maxi};
+    }
+  }

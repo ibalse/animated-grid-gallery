@@ -1,0 +1,8 @@
+.gallery {
+  &__loader {
+    color: $primaryColor;
+  }
+  &__empty-state {
+    @include t-title($primaryColor);
+  }
+}

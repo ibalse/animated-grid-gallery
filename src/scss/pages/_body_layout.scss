@@ -1,0 +1,13 @@
+
+.body {
+    display: grid;
+    grid-template:
+      " menu    menu   menu  " min-content 
+      " main    main   main  " 1fr 
+      " footer  footer footer" min-content;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+  }

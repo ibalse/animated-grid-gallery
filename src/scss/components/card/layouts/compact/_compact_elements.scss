@@ -1,0 +1,61 @@
+@include breakpoint-from($bpCollumns-2) {
+
+  .card--layout--compact {
+
+    .image {
+      width: var(--c-card-width);
+      height: var(--c-card-height);
+    }
+
+    .card__title {
+      @include u-text-scroll(3, 1.4em);
+      max-height: 3*1.4em;
+      opacity: 0;
+    }
+
+    .card__subtitle {
+      opacity: 0;
+    }
+
+    .card__divider {
+      display: none;
+    }
+
+    .card__actions__like,
+    .card__actions__expand {
+      display: none;
+    }
+
+    .card__actions__like.icon--mod--active {
+      display: inline;
+    }
+
+    // active
+    &:focus .card__title,
+    &:focus .card__subtitle,
+    &:active .card__title,
+    &:active .card__subtitle {
+      opacity: 1;
+    }
+
+    &:focus .card__actions__like,
+    &:focus .card__actions__expand,
+    &:active .card__actions__like,
+    &:active .card__actions__expand {
+      display: inline;
+    }
+
+    // on hover
+    @media (pointer: fine) {
+      &:hover .card__title,
+      &:hover .card__subtitle {
+        opacity: 1;
+      }
+
+      &:hover .card__actions__like,
+      &:hover .card__actions__expand {
+        display: inline;
+      }
+    }
+  }
+}

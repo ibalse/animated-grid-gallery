@@ -1,0 +1,41 @@
+.card {
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__actions {
+    margin: 15px 20px 15px 20px;
+    z-index: $zIndexCard;
+  }
+
+  @include breakpoint-to($bpCollumns-2) {
+    &__actions__expand {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include t-title($primaryColor);
+    @include u-text-scroll(3, 1.4em);
+    line-height: 1.4em;
+    max-height: 3*1.4em;
+    padding: 5px 20px 20px 20px;
+    overflow: hidden;
+    z-index: $zIndexCard;
+  }
+
+  &__subtitle {
+    @include t-subtitle($primaryColor);
+    @include u-text-scroll(4, 1.4em);
+    line-height: 1.4em;
+    max-height: 4*1.4em;
+    padding: 15px 20px 5px 20px;
+    overflow: hidden;
+    z-index: $zIndexCard;
+  }
+
+  &__divider {
+    @include o-divider(#353535, 100%);
+  }
+}

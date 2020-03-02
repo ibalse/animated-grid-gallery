@@ -1,0 +1,52 @@
+.icon {
+  cursor: pointer;
+
+  svg {
+    height: $iconSize;
+    padding: $iconPadding;
+    border-radius: 50px;
+
+    &:active {
+      height: $iconSize + 2*3px;
+      padding: $iconPadding - 3px;
+    }
+
+    @media (pointer: fine) {
+      &:hover {
+        height: $iconSize + 2*3px;
+        padding: $iconPadding - 3px;
+      }
+    }
+
+  }
+
+  &__call,
+  &__active,
+  &__cancel {
+    display: none;
+  }
+}
+
+.icon--mod--active {
+  .icon__active {
+    display: inline;
+  }
+
+  @media (pointer: fine) {
+    &:hover .icon__active {
+      display: none;
+    }
+
+    &:hover .icon__cancel {
+      display: inline;
+    }
+  }
+
+  
+}
+
+.icon--mod--inactive {
+  .icon__call {
+    display: inline;
+  }
+}

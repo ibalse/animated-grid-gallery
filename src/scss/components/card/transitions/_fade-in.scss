@@ -1,0 +1,54 @@
+@include breakpoint-from($bpCollumns-2) {
+  .card--transition--fade-in {
+    .image {
+      opacity: 100%;
+      transition: opacity 2s;
+    }
+
+    .card__title,
+    .card__subtitle,
+    .card__divider {
+      opacity: 0;
+      transition: opacity 2s;
+
+      @include breakpoint-between($bpCollumns-2, $bpCollumns-3) {
+        transition: opacity 3s;
+      }
+
+      @include breakpoint-between($bpCollumns-3, $bpCollumns-4) {
+        transition: opacity 4s;
+      }
+
+      @include breakpoint-from($bpCollumns-4) {
+        transition: opacity 5s;
+      }
+
+      &:active {
+        opacity: 1;
+        transition: opacity 0s 0s;
+      }
+
+      @media (pointer: fine) {
+        &:hover {
+          opacity: 1;
+          transition: opacity 0s 0s;
+        }
+      }
+    }
+
+    .card__actions,
+    .card__actions__like {
+      z-index: $zIndexCard;
+    }
+  }
+
+  .card--transition--fade-in.card--layout--expanded {
+
+    .card__title,
+    .card__subtitle,
+    .card__divider {
+      opacity: 1;
+      transition: opacity 0s 0s;
+    }
+  }
+}
