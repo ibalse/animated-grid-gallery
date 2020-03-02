@@ -1,0 +1,14 @@
+{
+    "end_with_newline": true,
+    "max_preserve_newlines": 10,
+    "break_chained_methods": true,
+    "indent_char": " ",
+    "indent_level": 0,
+    "indent_size": 2,
+    "end_with_comma": true,
+    "space_after_anon_function": true,
+    "space_before_conditional": true,
+    "brace_style": "collapse,preserve-inline",
+    "operator_position": "preserve-newline",
+    "unindent_chained_methods": false
+}

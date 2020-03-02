@@ -1,0 +1,24 @@
+{
+  "name": "animated-grid-gallery",
+  "version": "1.0.0",
+  "description": "Playing with vanilla JavaScript and CSS3.",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibalse/animated-grid-gallery.git"
+  },
+  "author": "ibalse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibalse/animated-grid-gallery/issues"
+  },
+  "homepage": "https://github.com/ibalse/animated-grid-gallery#readme",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
